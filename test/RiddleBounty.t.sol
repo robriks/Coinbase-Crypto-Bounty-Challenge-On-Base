@@ -20,12 +20,19 @@ contract BountyTest is Test {
         bytes memory riddleAnswer2 = bytes('The Merge');
         bytes32 messageHash = keccak256(abi.encodePacked(riddleAnswer2));
 
-        bytes memory signature = vm.sign(vm.envString("PK"), messageHash);
+        (uint8 v, bytes32 r, bytes32 s) = vm.sign(vm.envUint("PK"), messageHash);
+        bytes memory signature = abi.encodePacked(r, s, v);
         console.logBytes(signature);
     }
 
-    // function test_solveChallenge3() public returns (bytes32)
+    function test_solveChallenge3() public {
+        bytes memory riddleAnswer3 = bytes('EIP-4844');
+        bytes32 messageHash = keccak256(abi.encodePacked(riddleAnswer3));
 
-    // return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n", Strings.toString(t.length), t));
-    // return keccak256(bytes('0x3cd65f6089844a3c6409b0acc491ca0071a5672c2ab2a071f197011e0fc66b6a'));
+        (uint8 v, bytes32 r, bytes32 s) = vm.sign(vm.envUint("PK"), messageHash);
+        bytes memory vulnerableSig = abi.encodePacked(r, s, v);
+        console.logBytes(vulnerableSig);
+        bytes memory vulnerableSigReplay = abi.encodePacked(r, s);
+        console.logBytes(vulnerableSigReplay);
+    }
 }

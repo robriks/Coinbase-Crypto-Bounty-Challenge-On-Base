@@ -2,8 +2,8 @@
 pragma solidity 0.8.15;
 
 /// @dev Using OpenZeppelin 4.7.0 contracts
-import { Ownable } from "openzeppelin/contracts/access/Ownable.sol";
-import { ECDSA } from "openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import { Ownable } from "openzeppelin-contracts/contracts/access/Ownable.sol";
+import { ECDSA } from "openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
 
 /// Solve the riddles and embrace the challenge you will face,
 /// To add yourself to the leaderboard, to become based.
