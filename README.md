@@ -5,7 +5,9 @@ On March 3rd, during the week of EthDenver, the Twitter account for Coinbase's b
 
 Incentives for the bounty include a $250 prize (in $ETH) for the first 50 solvers as well as a limited-edition NFT (and potential for a conversation with a Coinbase recruiter) for the first 500 to complete the challenge. Too good to pass up, so I put my glass of port down and got cracking at hacking it.
 
-##### You'll find the challenge itself, RiddleBounty.sol, in the ./src directory and the solutions to the challenges in the RiddleBounty.t.sol file in the ./test directory. The solutions can be run as Foundry tests via ```forge test```
+##### You'll find the challenge itself, RiddleBounty.sol, in the ./src directory and the solutions to the challenges in the RiddleBounty.t.sol file in the ./test directory.
+
+##### If you don't need a walkthrough of the solutions, head over to inspect the code in ./test/RiddleBounty.t.sol and run the solutions' code using Foundry tests via ```forge test```
 
 ## The Contract
 
